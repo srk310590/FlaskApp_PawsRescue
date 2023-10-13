@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
+    <title>{% block title %}{% endblock %} Paws Rescue Centre</title>
+</head>
+<body>
+
+<div>
+<ul>
+    <li><a href="{{url_for('home')}}">Home</a></li>
+    <li><a href="{{url_for('about')}}">About</a></li>
+    <li><a href="{{url_for('signup')}}">Sign Up</a></li>
+</ul>
+</div>
+<h1 id="header">{% block heading %} {% endblock %} </h1>
+
+<div id="content">
+
+{% block content%}
+{% endblock %}
+
+</div>
+
+</body>
+</html>
